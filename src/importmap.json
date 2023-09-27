@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "@socketsupply/tonic": "/node_modules/@socketsupply/tonic/index.js"
+  }
+}

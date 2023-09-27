@@ -1,0 +1,82 @@
+#split-main {
+  top: 0px;
+  border-top: 1px solid var(--stv-border);
+}
+
+tonic-split {
+  background-color: var(--stv-window);
+}
+
+tonic-split .tonic--split-vertical {
+  z-index: 6 !important;
+  border-left: 1px solid var(--stv-border) !important;
+}
+
+tonic-split .tonic--split-horizontal {
+  margin-top: -5px;
+  z-index: 8 !important;
+}
+
+tonic-split[dragging] > .tonic--split-handle, tonic-split .tonic--split-handle:hover {
+  background: var(--stv-accent);
+}
+
+tonic-icon {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+tonic-input[symbol-id] .tonic--left tonic-icon,
+tonic-input[src] .tonic--left tonic-icon {
+  left: 8px !important;
+  bottom: 6px;
+}
+
+tonic-input input {
+  border-radius: 6px !important;
+  font: unset !important;
+  font-family: var(--tonic-body) !important;
+  font-size: 13px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  color: var(--stv-primary) !important;
+  background-color: var(--stv-input) !important;
+}
+
+tonic-input[symbol-id]:not([position="right"]) input {
+  padding-left: 34px !important;
+}
+
+tonic-input input::placeholder  {
+  color: var(--stv-secondary) !important;
+}
+
+tonic-input input:focus::placeholder  {
+  color: var(--stv-input) !important;
+}
+
+tonic-button[type="icon"] {
+  width: 32px;
+  height: 32px;
+}
+
+tonic-button .tonic--button--wrapper {
+  display: grid;
+}
+
+tonic-toaster {
+  display: block;
+  width: 100%;
+}
+
+tonic-toaster-inline .tonic--notification.tonic--show {
+  display: grid;
+}
+
+@media (max-width: 699px) {
+  #split-main {
+    border-top: unset;
+  }
+}
+

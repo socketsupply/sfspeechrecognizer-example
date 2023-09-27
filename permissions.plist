@@ -1,0 +1,5 @@
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>{{meta_title}} would like to access Speech Recognition</string>
+
+  <key>NSMicrophoneUsageDescription</key>
+  <string>{{meta_title}} would like to access to your microphone</string>

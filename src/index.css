@@ -1,0 +1,137 @@
+@import 'styles/fonts.css';
+@import 'styles/theme.css';
+@import 'styles/reset.css';
+@import 'styles/overrides.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+:root {
+  --vw-unit: 1vw;
+  --vh-unit: 1vh;
+
+  --hidden-text-size: 0.001px;
+
+  --color-transparent: transparent;
+  --color-white: 255, 255, 255;         /* #fff */
+  --color-black: 0, 0, 0;               /* #000 */
+  --color-gray-1: 221, 221, 221;        /* #ddd */
+  --color-gray-green-1: 50, 53, 47;     /* #32352f */
+  --color-gray-green-2: 169, 173, 165;  /* #a9ada5 */
+  --color-yellow-1: 255, 255, 0;        /* #ffff00 */
+  --color-blue-1: 105, 190, 250;        /* #69befa */
+  --color-blue-2: 36, 135, 205;         /* #2487cd */
+
+  /* new color theem */
+  --color-black-new: 21, 20, 20;            /* #151414 */
+  --color-white-new: 255, 255, 255;         /* #ffffff */
+  --color-white-new-40: 255, 255, 255, 0.4; /* #ffffff */
+  --color-white-new-60: 255, 255, 255, 0.6; /* #ffffff */
+  --color-grey-new: 42, 44, 41;             /* #A2C29 */
+
+  /* filter generator: https://codepen.io/sosuke/pen/Pjoqqp */
+  --color-image-filter-white: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);   /* #fff */
+  --color-image-filter-gray-green-1: invert(16%) sepia(9%) saturate(586%) hue-rotate(47deg) brightness(96%) contrast(87%);   /* #32352f */
+  --color-image-filter-pink-1: invert(85%) sepia(22%) saturate(2486%) hue-rotate(303deg) brightness(103%) contrast(96%);  /* #fa9e89 */
+  --color-image-filter-yellow-1: invert(100%) sepia(25%) saturate(7492%) hue-rotate(356deg) brightness(99%) contrast(111%);  /* #ffff00 */
+  --color-image-filter-blue-1: invert(61%) sepia(83%) saturate(449%) hue-rotate(178deg) brightness(102%) contrast(96%);  /* #69befa */
+
+  --bg-color: rgba(var(--color-gray-green-1));
+  --text-color: rgba(var(--color-white));
+  --form-element-bg-color: rgba(var(--color-gray-green-1));
+  --form-element-text-color: rgba(var(--color-yellow-1));
+  --form-element-placeholder-color: rgba(var(--color-yellow-1), 0.6);
+
+  --button-bg-color: rgba(var(--color-gray-green-1));
+  --button-text-color: rgba(var(--color-white));
+
+  --base-font-size: min(max(var(--vw-unit) * 1, 1.3rem), 1.7rem);
+  --local-base-font-size: var(--base-font-size);
+
+}
+
+html {
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  box-sizing: border-box;
+  background-color: #151414;
+  color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  color: inherit;
+  font-family:'Manrope', sans-serif;;
+  font-size: inherit;
+}
+
+input,
+button {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: inherit;
+  background-color: var(--form-element-bg-color);
+  color: rgba(var(--color-white));
+  border: thin solid rgba(var(--color-white));
+  padding: calc(var(--base-font-size) / 5) calc(var(--base-font-size) / 2);
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: calc(var(--vw-unit) * 0.3) solid rgba(var(--color-yellow-1));
+}
+
+button {
+  cursor: pointer;
+  border-radius: calc(var(--vw-unit) * 0.8);
+}
+
+input[type=text] {
+  color: var(--color-white-new-60);
+  font-weight: bold;
+}
+input[type=text]::placeholder {
+  color: var(--color-white-new-60);
+  font-weight: normal;
+}
+
+button:disabled, button[disabled],
+input:disabled, input[disabled] {
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+}
+
+textarea {
+  border: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background-color: transparent;
+  padding: 50% 0;
+  resize: none;
+  color: var(--color-white);
+  pointer-events: none;
+  font-size: 2rem;
+  text-align: center;
+}
+
+button[data-event=record-or-stop] {
+  margin-top: 24px;
+  margin-left: 10%;
+  z-index: 1000;
+}
+
+button.recording {
+  background-color: #fa9e89;
+}

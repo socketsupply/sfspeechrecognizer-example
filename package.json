@@ -1,0 +1,14 @@
+{
+  "name": "@socketsupply/sfspeechrecognizer-example",
+  "version": "1.0.0",
+  "description": "An example Socket Runtime application that uses the SFSpeechRecognizer Framework",
+  "main": "index.js",
+  "scripts": {
+    "start": "ssc build -r -o"
+  },
+  "author": "Joseph Werle <joseph@socketsupply.co>",
+  "license": "MIT",
+  "dependencies": {
+    "@socketsupply/tonic": "^15.1.1"
+  }
+}

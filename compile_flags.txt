@@ -1,0 +1,10 @@
+-Inode_modules/@socketsupply/socket-darwin-arm64/include
+-Inode_modules/@socketsupply/socket-darwin-arm64
+-Inode_modules/@socketsupply/socket-darwin-x64/include
+-Inode_modules/@socketsupply/socket/node_modules/@socketsupply/socket-darwin-arm64/include
+-Inode_modules/@socketsupply/socket/node_modules/@socketsupply/socket-darwin-x64/include
+-Iinclude
+-Iextension/include
+-Ideps
+-std=c++2a
+-ObjC++
