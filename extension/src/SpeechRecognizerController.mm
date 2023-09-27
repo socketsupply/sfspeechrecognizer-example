@@ -17,8 +17,7 @@ static SpeechRecognizerController* sharedInstance = nil;
 - (instancetype) init {
   self = [super init];
   // use system locale
-  //self.locale = [NSLocale autoupdatingCurrentLocale];
-  self.locale = [NSLocale localeWithLocaleIdentifier: @"en"];
+  self.locale = [NSLocale autoupdatingCurrentLocale];
 
   // speech
   self.speechRecognizer = [[SFSpeechRecognizer alloc] initWithLocale: self.locale];
