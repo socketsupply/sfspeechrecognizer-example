@@ -17,4 +17,6 @@ npm install
 npm start # or ssc build -r -o
 ```
 
-## License MIT
+## License
+
+MIT
